@@ -6,8 +6,6 @@
 local ScreenGui = Instance.new("ScreenGui")
 local FARM = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
 
 --Properties:
 
@@ -26,31 +24,15 @@ FARM.TextSize = 14.000
 
 UICorner.Parent = FARM
 
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(-0.0113339145, 0, -0.235197365, 0)
-TextLabel.Size = UDim2.new(0, 1021, 0, 455)
-TextLabel.Visible = false
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "FARMING STATUS :"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-UICorner_2.Parent = TextLabel
-
 -- Scripts:
 
-local function OWVTLZP_fake_script() -- FARM.LocalScript 
+local function MGHMQUM_fake_script() -- FARM.LocalScript 
 	local script = Instance.new('LocalScript', FARM)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Visible = false
 		wait(2)
 		
-		script.Parent.Parent:WaitForChild("TextLabel").Visible = true
 		_G.AutoFarm = true
 	
 		-- // Variables
@@ -86,8 +68,8 @@ local function OWVTLZP_fake_script() -- FARM.LocalScript
 						end
 					end
 				end
-			game.Players:FindFirstChild(Farming).Character.Combat:Activate()
-				wait() -- REMOVE?!
+				game.Players:FindFirstChild(Farming).Character.Combat:Activate()
+				wait()
 			end
 		end
 	
@@ -108,13 +90,8 @@ local function OWVTLZP_fake_script() -- FARM.LocalScript
 		coroutine.wrap(Farmando)()
 		coroutine.wrap(FarmandoLoop)()
 		coroutine.wrap(OpensLoop)()
-	
-	end)
+		
+		
+		end)
 end
-coroutine.wrap(OWVTLZP_fake_script)()
-local function QRBFON_fake_script() -- TextLabel.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel)
-
-	script.Parent.Text = "FARMING STATUS : 🟢"
-end
-coroutine.wrap(QRBFON_fake_script)()
+coroutine.wrap(MGHMQUM_fake_script)()
